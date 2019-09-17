@@ -1,6 +1,5 @@
 import {
-    PASSWORD_SUBMIT,
-    CODE_SUBMITED
+    PASSWORD_SUBMIT
 } from '../types'
 
 export default (state, action) => {
@@ -10,11 +9,6 @@ export default (state, action) => {
             ...state,
             passwordMatched: true
         }
-        case CODE_SUBMITED: 
-        return {
-        ...state,
-        codeSubmited: true
-    }
         default:
             return state
     }

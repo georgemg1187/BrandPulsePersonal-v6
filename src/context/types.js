@@ -1,14 +1,14 @@
 // ============= App  Context=============>> 
-export const GET_USER_PASSWORD = 'GET_USER_PASSWORD';
 export const PASSWORD_SUBMIT = 'PASSWORD_SUBMIT';
-export const CODE_SUBMITED = 'CODE_SUBMITED';
 
 // ============= Brand Pulse Contetx =======>>
 export const LANGUAGE_UPDATE = "LANGUAGE_UPDATE";
-export const QUESTION_NUMBER_UPDATE = "QUESTION_UPDATE";
-export const QUESTION_LIST = "QUESTION_LIST";
+export const METRICS_UPDATE = "METRICS_UPDATE";
+export const QUESTIONS_UPDATE = "QUESTIONS_UPDATE";
+export const NEXT_BTN_UPDATE = "NEXT_BTN_UPDATE";
+export const SUBMIT_BTN_UPDATE = "SUBMIT_BTN_UPDATE";
+export const END_MSG_UPDATE = "END_MSG_UPDATE";
 
 // ============= Question Card Context =======>>
-export const METRIC_UPDATE = "METRIC_UPDATE";
 export const QUESTION_TEXT_UPDATE = "QUESTION_TEXT_UPDATE";
 export const ANSWERS_UPDATE = "ANSWERS_UPDATE";

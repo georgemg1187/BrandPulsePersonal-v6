@@ -3,30 +3,25 @@ import AppContext from './AppContext';
 import AppReducer from './AppReducer';
 
 import {
-    PASSWORD_SUBMIT,
-    CODE_SUBMITED
+    PASSWORD_SUBMIT
 } from "../types"
 
 const AppState = props => {
     const initialState = {
         password: "teads",
-        passwordMatched: false,
-        codeSubmited: false
+        passwordMatched: true,
     }
 
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
     const passwordSubmit = () => dispatch({ type: PASSWORD_SUBMIT })
-    const handleCodeView = () => dispatch({type: CODE_SUBMITED})
     
     return (
         <AppContext.Provider 
             value={{
                 password: state.password,
                 passwordMatched: state.passwordMatched,
-                codeSubmited: state.codeSubmited,
-                passwordSubmit,
-                handleCodeView
+                passwordSubmit
             }}
         >
             {props.children}

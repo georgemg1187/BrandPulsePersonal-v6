@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const CardHeader = ({children, id, className, style}) => {
     
-    const classList = (`card-header $className}`).trim();
+    const classList = (`card-header ${className}`).trim();
     
     return (
         <div id={id} className={classList} style={style}>

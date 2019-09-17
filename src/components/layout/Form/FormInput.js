@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const FormInput = ({id, className, style, type, version, name, placeholder, value, onChange}) => {
+const FormInput = ({id, className, style, type, version, name, placeholder, value, onChange, checked, disabled}) => {
 
     const classList = (`${className} ${version}`).trim();
 
@@ -15,12 +15,14 @@ const FormInput = ({id, className, style, type, version, name, placeholder, valu
             value={value}
             placeholder={placeholder}
             onChange={onChange}
+            checked={checked}
+            disabled={disabled}
         />
     )
 }
 
 FormInput.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.string,
     className: PropTypes.string,
     style: PropTypes.object,
     type: PropTypes.string,
@@ -28,14 +30,18 @@ FormInput.propTypes = {
     name: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    checked: PropTypes.bool,
+    disabled: PropTypes.bool,
 }
 
 FormInput.defaultProps = {
     className: '',
     version: 'form-control',
     name: '',
-    placeholder: ''
+    placeholder: '',
+    checked: false,
+    disabled: false
 }
 
 export default FormInput;

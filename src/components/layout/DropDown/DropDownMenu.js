@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const DropDownMenu = ({children, id, className, style}) => {
     
-    classList = (`dropdown-menu ${className}`).trim();
+    const classList = (`dropdown-menu ${className}`).trim();
     
     return (
         <div id={id} className={classList} style={style}>

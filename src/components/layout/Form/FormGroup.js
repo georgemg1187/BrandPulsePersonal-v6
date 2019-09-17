@@ -16,7 +16,7 @@ FormGroup.propTypes = {
     id: PropTypes.string,
     className: PropTypes.string,
     style: PropTypes.object,
-    version: PropTypes.oneOf(['custom-control custom-radio', ' custom-control custom-checkbox', ' custom-control custom-switch', '']),
+    version: PropTypes.oneOf(['custom-control custom-radio', 'custom-control custom-checkbox', 'custom-control custom-switch', '']),
 }
 
 FormGroup.defaultProps = {

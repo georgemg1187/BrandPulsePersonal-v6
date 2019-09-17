@@ -1,11 +1,17 @@
-import React, {useState, useContext} from 'react';
-import NavigatioBar from './NavigationBar';
+import React, { Fragment } from 'react';
+import Navigation from './Navigation';
+import Container from './layout/Container';
+import Questions from './Questions';
 
 const Formular = () => {
-
-
     return (
-        <NavigatioBar />
+        <Fragment>
+            <Navigation />
+
+            <Container>
+                <Questions />
+            </Container>
+        </Fragment>
     )
 }
 
