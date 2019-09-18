@@ -6,7 +6,6 @@ import data from '../../data/data'
 
 import {
     LANGUAGE_UPDATE,
-    METRICS_UPDATE,
     QUESTIONS_UPDATE,
     NEXT_BTN_UPDATE,
     SUBMIT_BTN_UPDATE,
@@ -16,7 +15,6 @@ import {
 const FormularState = props => {
     const initialState = {
         language: {label: 'English', value: 'english'},
-        metrics: [{label: 'Brand Awareness', value: 'brandAwareness'}],
         questions: [{...data.english.type.brandAwareness}],
         nextBtn: "Next",
         submitBtn: "Submit",
@@ -29,13 +27,6 @@ const FormularState = props => {
         dispatch({
             type: LANGUAGE_UPDATE,
             payload: { label, value }
-        })
-    }
-
-    const metricsUpdate = list => {
-        dispatch({
-            type: METRICS_UPDATE,
-            payload: list
         })
     }
 
@@ -71,13 +62,11 @@ const FormularState = props => {
         <FormularContext.Provider
             value={{
                 language: state.language,
-                metrics: state.metrics,
                 questions: state.questions,
                 nextBtn: state.nextBtn,
                 submitBtn: state.submitBtn,
                 endMessage: state.endMessage,
                 languageUpdate,
-                metricsUpdate,
                 questionsUpdate,
                 nextBtnUpdate,
                 submitBtnUpdate,

@@ -1,7 +1,6 @@
 import {
     LANGUAGE_UPDATE,
     QUESTIONS_UPDATE,
-    METRICS_UPDATE,
     NEXT_BTN_UPDATE,
     SUBMIT_BTN_UPDATE,
     END_MSG_UPDATE
@@ -18,11 +17,6 @@ export default (state, action) => {
             return {
                 ...state,
                 questions: action.payload
-            }
-        case METRICS_UPDATE:
-            return {
-                ...state,
-                metrics: action.payload
             }
 
         case NEXT_BTN_UPDATE:

@@ -3,7 +3,7 @@ export const PASSWORD_SUBMIT = 'PASSWORD_SUBMIT';
 
 // ============= Brand Pulse Contetx =======>>
 export const LANGUAGE_UPDATE = "LANGUAGE_UPDATE";
-export const METRICS_UPDATE = "METRICS_UPDATE";
+export const METRIC_UPDATE = "METRICS_UPDATE";
 export const QUESTIONS_UPDATE = "QUESTIONS_UPDATE";
 export const NEXT_BTN_UPDATE = "NEXT_BTN_UPDATE";
 export const SUBMIT_BTN_UPDATE = "SUBMIT_BTN_UPDATE";
