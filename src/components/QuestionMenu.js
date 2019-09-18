@@ -35,7 +35,7 @@ const QuestionMenu = ({ idx }) => {
         newMetrics[idx] = {label: e.target.textContent, value: e.target.value}
 
         const newQuestions = [...questions]
-        newQuestions[idx] = data[language.value].type[e.target.value]
+        newQuestions[idx] = {...data[language.value].type[e.target.value]}
 
         metricsUpdate(newMetrics);
         questionsUpdate(newQuestions)

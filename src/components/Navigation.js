@@ -19,7 +19,7 @@ const Navigation = () => {
 
     const handeItemsClick = e => {
         const newMetrics = metrics.map(metric => { return {...data[e.target.value].menuItems[metric.value]} })
-        const newQeustions = questions.map((question, idx) => data[e.target.value].type[newMetrics[idx].value] )
+        const newQeustions = questions.map((question, idx) => { return {...data[e.target.value].type[newMetrics[idx].value]} })
         
         languageUpdate(e.target.textContent, e.target.value);
         metricsUpdate(newMetrics)
