@@ -20,9 +20,8 @@ const Question = ({ idx }) => {
     const { metric } = questionContext;
 
     useEffect(() => {
-        const newQeustions = questions.map((question, index) => {
-            return JSON.parse(JSON.stringify(data[language.value].type[metric.value]))
-        })
+        const newQeustions = [...questions]
+        newQeustions[idx] = JSON.parse(JSON.stringify(data[language.value].type[metric.value]))
 
         questionsUpdate(newQeustions)
         // eslint-disable-next-line react-hooks/exhaustive-deps
