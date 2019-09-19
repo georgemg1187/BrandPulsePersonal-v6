@@ -3,7 +3,8 @@ import {
     QUESTIONS_UPDATE,
     NEXT_BTN_UPDATE,
     SUBMIT_BTN_UPDATE,
-    END_MSG_UPDATE
+    END_MSG_UPDATE,
+    PROGESS_BOX_UPDATE
 } from "../types"
 
 export default (state, action) => {
@@ -33,6 +34,11 @@ export default (state, action) => {
             return {
                 ...state,
                 endMessage: action.payload
+            }
+        case PROGESS_BOX_UPDATE:
+            return {
+                ...state,
+                progressBox: action.payload
             }
         default:
             return state

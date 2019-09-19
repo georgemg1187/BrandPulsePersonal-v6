@@ -27,7 +27,7 @@ Card.defaultProps = {
 }
 
 Card.Header = CardHeader;
-Card.CardBody = CardBody;
+Card.Body = CardBody;
 
 export default Card
 

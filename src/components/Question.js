@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import Card from './layout/Card/Card';
+import QuestionText from './QuestionText';
 import QuestionMenu from './QuestionMenu';
 import QuestionConfig from './QuestionConfig';
 import Answers from './Answers';
 
 import FormularContext from '../context/formular/FormularContext';
 import QuestionContext from '../context/question/QuestionContext';
-
-
 
 import data from '../data/data'
 
@@ -20,9 +19,7 @@ const Question = ({ idx }) => {
     const { metric } = questionContext;
 
     useEffect(() => {
-        const newQeustions = [...questions]
-        newQeustions[idx] = JSON.parse(JSON.stringify(data[language.value].type[metric.value]))
-
+        const newQeustions = questions.map(question => JSON.parse(JSON.stringify(data[language.value].type[metric.value])))
         questionsUpdate(newQeustions)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [language])
@@ -32,10 +29,11 @@ const Question = ({ idx }) => {
             <Card.Header className='d-flex justify-content-between'>
                 <QuestionMenu idx={idx} />
             </Card.Header>
-            <Card.CardBody>
+            <Card.Body>
+                <QuestionText idx={idx} />
                 <QuestionConfig idx={idx} />
                 <Answers idx={idx} />
-            </Card.CardBody>
+            </Card.Body>
         </Card>
     )
 }

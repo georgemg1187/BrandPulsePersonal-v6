@@ -9,7 +9,8 @@ import {
     QUESTIONS_UPDATE,
     NEXT_BTN_UPDATE,
     SUBMIT_BTN_UPDATE,
-    END_MSG_UPDATE
+    END_MSG_UPDATE,
+    PROGESS_BOX_UPDATE
 } from "../types"
 
 const FormularState = props => {
@@ -19,6 +20,7 @@ const FormularState = props => {
         nextBtn: "Next",
         submitBtn: "Submit",
         endMessage: "Thank you",
+        progressBox: true
     }
 
     const [state, dispatch] = useReducer(FormularReducer, initialState)
@@ -58,6 +60,13 @@ const FormularState = props => {
         })
     }
 
+    const progressBoxUpdate = bool => {
+        dispatch({
+            type: PROGESS_BOX_UPDATE,
+            payload: bool
+        })
+    }
+
     return (
         <FormularContext.Provider
             value={{
@@ -66,11 +75,13 @@ const FormularState = props => {
                 nextBtn: state.nextBtn,
                 submitBtn: state.submitBtn,
                 endMessage: state.endMessage,
+                progressBox: state.progressBox,
                 languageUpdate,
                 questionsUpdate,
                 nextBtnUpdate,
                 submitBtnUpdate,
-                endMessageUpdate
+                endMessageUpdate,
+                progressBoxUpdate
             }}
         >
             {props.children}

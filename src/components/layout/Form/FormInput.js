@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const FormInput = ({id, className, style, type, version, name, placeholder, value, onChange, checked, disabled}) => {
 
-    const classList = (`${className} ${version}`).trim();
+    const classList = (`${version} ${className}`).trim();
 
     return (
         <input 

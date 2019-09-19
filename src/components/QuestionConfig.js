@@ -25,8 +25,6 @@ const QuestionConfig = ({ idx }) => {
         const newQuestions = [...questions]
         newQuestions[idx].none.checked = !questions[idx].none.checked;
         questionsUpdate(newQuestions);
-
-        console.log("swithd: ", questions[idx])
     }
 
     const handleNone = e => {

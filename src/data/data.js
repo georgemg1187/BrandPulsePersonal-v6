@@ -27,7 +27,7 @@ const Metrics = {
                 answers: ["Brand A", "Brand B", "Brand C", "Brand D"],
                 multiple: true,
                 randomize: true,
-                none: { checked: true, value: "None of the above" }
+                none: { checked: true, value: "None of the above" },
             },
 
             adRecallAdAwareness: {
