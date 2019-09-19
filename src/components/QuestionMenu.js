@@ -17,7 +17,7 @@ const QuestionMenu = ({ idx }) => {
 
     const [visbility, setvisbility] = useState("none");
 
-    const [dropDownItems, setDropDownItems] = useState({...data[language.value].menuItems})
+    const [dropDownItems, setDropDownItems] = useState({ ...data[language.value].menuItems })
 
     useEffect(() => {
         const d = questions.length === 1 ? "none" : "initial";
@@ -41,7 +41,11 @@ const QuestionMenu = ({ idx }) => {
     const handleDropDownClick = e => {
         const label = e.target.textContent;
         const value = e.target.value;
-        metricUpdate(label, value)
+        metricUpdate(label, value);
+
+        const newQeustions = [...questions]
+        newQeustions[idx] = JSON.parse(JSON.stringify(data[language.value].type[value]))
+        questionsUpdate(newQeustions)
     }
 
     return (

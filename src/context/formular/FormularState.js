@@ -15,7 +15,7 @@ import {
 const FormularState = props => {
     const initialState = {
         language: {label: 'English', value: 'english'},
-        questions: [{...data.english.type.brandAwareness}],
+        questions: [JSON.parse(JSON.stringify(data.english.type.brandAwareness))],
         nextBtn: "Next",
         submitBtn: "Submit",
         endMessage: "Thank you",

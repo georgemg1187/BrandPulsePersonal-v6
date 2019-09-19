@@ -21,12 +21,12 @@ const Question = ({ idx }) => {
 
     useEffect(() => {
         const newQeustions = questions.map((question, index) => {
-            return {...data[language.value].type[metric.value] }
+            return JSON.parse(JSON.stringify(data[language.value].type[metric.value]))
         })
 
         questionsUpdate(newQeustions)
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [language, metric])
+    }, [language])
 
     return (
         <Card>

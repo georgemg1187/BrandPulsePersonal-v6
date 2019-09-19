@@ -23,7 +23,7 @@ const Navigation = () => {
 
     const addQuestion = () => {
         const newQuestions = [...questions];
-        newQuestions.push({...data[language.value].type.brandAwareness})
+        newQuestions.push(JSON.parse(JSON.stringify(data[language.value].type.brandAwareness)))
         questionsUpdate(newQuestions)
     }
 
