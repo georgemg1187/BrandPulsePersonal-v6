@@ -10,7 +10,7 @@ import data from '../data/data';
 const Navigation = () => {
 
     const formularContext = useContext(FormularContext);
-    const {language, questions, languageUpdate, questionsUpdate, nextBtnUpdate, submitBtnUpdate, endMessageUpdate} = formularContext;
+    const {language, questions, languageUpdate, questionsUpdate} = formularContext;
 
     const languages = [
         { label: 'English', value: 'english' },
@@ -19,9 +19,6 @@ const Navigation = () => {
 
     const handeItemsClick = e => {        
         languageUpdate(e.target.textContent, e.target.value);
-        nextBtnUpdate(data[e.target.value].nextBtn)
-        submitBtnUpdate(data[e.target.value].submitBtn)
-        endMessageUpdate(data[e.target.value].endMessage)
     }
 
     const addQuestion = () => {

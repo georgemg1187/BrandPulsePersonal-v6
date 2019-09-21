@@ -29,8 +29,7 @@ const QuestionMenu = ({ idx }) => {
         const value = data[language.value].menuItems[metric.value].value
 
         metricUpdate(label, value)
-        setDropDownItems({ ...data[language.value].menuItems })
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        setDropDownItems({ ...data[language.value].menuItems }) // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [language])
 
     const removeCard = () => {

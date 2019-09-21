@@ -28,7 +28,7 @@ FormInput.propTypes = {
     type: PropTypes.string,
     version: PropTypes.oneOf(['custom-control-input', 'form-control']).isRequired,
     name: PropTypes.string,
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
     checked: PropTypes.bool,

@@ -10,7 +10,9 @@ import {
     NEXT_BTN_UPDATE,
     SUBMIT_BTN_UPDATE,
     END_MSG_UPDATE,
-    PROGESS_BOX_UPDATE
+    PROGESS_BOX_UPDATE,
+    TRACKING_UPDATE,
+    VARIANT_UPDATE
 } from "../types"
 
 const FormularState = props => {
@@ -20,7 +22,12 @@ const FormularState = props => {
         nextBtn: "Next",
         submitBtn: "Submit",
         endMessage: "Thank you",
-        progressBox: true
+        progressBox: true,
+        tracking: {
+            exposed: false,
+            nonexposed: false
+        },
+        variant: 'bg1'
     }
 
     const [state, dispatch] = useReducer(FormularReducer, initialState)
@@ -67,6 +74,20 @@ const FormularState = props => {
         })
     }
 
+    const trackingUpdate = obj => {
+        dispatch({
+            type: TRACKING_UPDATE,
+            payload: obj
+        })
+    }
+
+    const variantUpdate = text => {
+        dispatch({
+            type: VARIANT_UPDATE,
+            payload: text
+        })
+    }
+
     return (
         <FormularContext.Provider
             value={{
@@ -76,12 +97,16 @@ const FormularState = props => {
                 submitBtn: state.submitBtn,
                 endMessage: state.endMessage,
                 progressBox: state.progressBox,
+                tracking: state.tracking,
+                variant: state.variant,
                 languageUpdate,
                 questionsUpdate,
                 nextBtnUpdate,
                 submitBtnUpdate,
                 endMessageUpdate,
-                progressBoxUpdate
+                progressBoxUpdate,
+                trackingUpdate,
+                variantUpdate
             }}
         >
             {props.children}

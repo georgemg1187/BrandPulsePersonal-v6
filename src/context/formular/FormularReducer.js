@@ -4,7 +4,8 @@ import {
     NEXT_BTN_UPDATE,
     SUBMIT_BTN_UPDATE,
     END_MSG_UPDATE,
-    PROGESS_BOX_UPDATE
+    PROGESS_BOX_UPDATE,
+    VARIANT_UPDATE
 } from "../types"
 
 export default (state, action) => {
@@ -39,6 +40,11 @@ export default (state, action) => {
             return {
                 ...state,
                 progressBox: action.payload
+            }
+        case VARIANT_UPDATE:
+            return {
+                ...state,
+                variant: action.payload
             }
         default:
             return state
