@@ -47,7 +47,7 @@ const SurveyLayout = () => {
 
             <Form.Group className='mb-0' version='custom-control custom-checkbox'>
                 <Form.Input type="checkbox" version="custom-control-input" id='progress-box' checked={progressBox} onChange={handleProgressChange} />
-                <Form.Label variant="custom-control-label" htmlFor='progress-box'>Randomize Answers</Form.Label>
+                <Form.Label variant="custom-control-label" htmlFor='progress-box'>Show progress box</Form.Label>
             </Form.Group>
         </Form>
     )

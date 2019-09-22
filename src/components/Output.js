@@ -9,7 +9,7 @@ import FormularContext from '../context/formular/FormularContext';
 const Output = () => {
 
     const formularContext = useContext(FormularContext);
-    const {tracking, questions, progressBox, nextBtn, submitBtn, endMessage, variant} = formularContext; 
+    const {tracking, questions, progressBox, nextBtn, submitBtn, endMessage, variant, language} = formularContext; 
 
     const [width, setWidth] = useState("48%")
     const [display, setDisplay] = useState("none")
@@ -25,6 +25,10 @@ const Output = () => {
         setDisplay(newDisplay)
         setTitle(newTitle)
     }, [tracking])
+
+    useEffect(() => {
+        setValue(['', ''])
+    }, [tracking, questions, language, nextBtn, submitBtn, endMessage, variant])
 
     const generateOuput = () => Generate(tracking, questions, progressBox, nextBtn, submitBtn, endMessage, variant, setValue)
 
