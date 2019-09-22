@@ -5,6 +5,7 @@ import {
     SUBMIT_BTN_UPDATE,
     END_MSG_UPDATE,
     PROGESS_BOX_UPDATE,
+    TRACKING_UPDATE,
     VARIANT_UPDATE
 } from "../types"
 
@@ -40,6 +41,12 @@ export default (state, action) => {
             return {
                 ...state,
                 progressBox: action.payload
+            }
+
+        case TRACKING_UPDATE:
+            return {
+                ...state,
+                tracking: action.payload
             }
         case VARIANT_UPDATE:
             return {

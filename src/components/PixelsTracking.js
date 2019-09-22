@@ -14,27 +14,28 @@ const PixelsTracking = () => {
     const [margin, setMargin] = useState('mb-0');
 
     const handleSwitch = () => {
-        if (!disabled) {
-            setDisabled(true);
-            setDisplay('block')
-            setMargin('mb-3')
-            const trackingOn = { ...tracking }
-            tracking.exposed = ''
-            tracking.nonexposed = ''
-            trackingUpdate(trackingOn);
-        } else {
+        setDisabled(!disabled);
+
+        if (disabled) {
             setDisabled(false)
             setDisplay('none')
             setMargin('mb-0')
-            const trackingOff = { ...tracking }
-            tracking.exposed = false
-            tracking.nonexposed = false
-            trackingUpdate(trackingOff)
+            const newTracking = {...tracking}
+            newTracking.exposed = false
+            newTracking.noneexposed = false
+            trackingUpdate(newTracking);
+        } else {
+            setDisplay('block')
+            setMargin('mb-3')
+            const newTracking = {...tracking}
+            newTracking.exposed = ''
+            newTracking.noneexposed = ''
+            trackingUpdate(newTracking);
         }
     }
 
     const handleInputUpdate = e => {
-        const newTracking = { ...tracking }
+        const newTracking = {...tracking}
         newTracking[e.target.name] = e.target.value;
         trackingUpdate(newTracking);
     }
@@ -46,14 +47,14 @@ const PixelsTracking = () => {
                     <Form.Input type="checkbox" version="custom-control-input" id='pixels-cb' checked={disabled} onChange={handleSwitch} />
                     <Form.Label variant="custom-control-label" htmlFor='pixels-cb'>Add tracking pixels for end message below</Form.Label>
                 </Form.Group>
-                <div style={{display: display}}>
+                <div style={{ display: display }}>
                     <Form.Group>
                         <Form.Label htmlFor='exposed'>Exposed Tracking</Form.Label>
-                        <Form.Input name='exposed' id='exposed' onChange={handleInputUpdate} />
+                        <Form.Input name='exposed' id='exposed' value={tracking.exposed} onChange={handleInputUpdate} />
                     </Form.Group>
                     <Form.Group>
                         <Form.Label htmlFor='non-exposed'>Exposed Tracking</Form.Label>
-                        <Form.Input name='nonexposed' id='non-exposed' onChange={handleInputUpdate} />
+                        <Form.Input name='noneexposed' id='non-exposed' value={tracking.noneexposed} onChange={handleInputUpdate} />
                     </Form.Group>
                 </div>
             </Form>

@@ -25,7 +25,7 @@ const FormularState = props => {
         progressBox: true,
         tracking: {
             exposed: false,
-            nonexposed: false
+            noneexposed: false
         },
         variant: 'bg1'
     }
