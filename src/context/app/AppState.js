@@ -9,7 +9,7 @@ import {
 const AppState = props => {
     const initialState = {
         password: "teads",
-        passwordMatched: true,
+        passwordMatched: false
     }
 
     const [state, dispatch] = useReducer(AppReducer, initialState)

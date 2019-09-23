@@ -17,6 +17,7 @@ const Login = () => {
     const updateInput = e => setValue(e.target.value)
     const handlePasswordSubmit = e => {
         e.preventDefault();
+        console.log(password, value)
         if (password === value) passwordSubmit();
     }
 

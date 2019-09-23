@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const FormInput = ({id, className, style, type, version, name, placeholder, value, onChange, checked, disabled}) => {
+const FormInput = ({id, className, style, type, version, name, placeholder, value, onChange, checked, disabled, maxLength}) => {
 
     const classList = (`${version} ${className}`).trim();
 
@@ -17,6 +17,7 @@ const FormInput = ({id, className, style, type, version, name, placeholder, valu
             onChange={onChange}
             checked={checked}
             disabled={disabled}
+            maxLength={maxLength}
         />
     )
 }
@@ -33,6 +34,7 @@ FormInput.propTypes = {
     placeholder: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
+    maxLength: PropTypes.number,
 }
 
 FormInput.defaultProps = {

@@ -20,7 +20,7 @@ const Answers = ({ idx }) => {
                 return (
                     <Form.Group key={index} style={{ width: '48%' }} >
                         <Form.Label>{`Answers ${index + 1}`}</Form.Label>
-                        <Form.Input type="text" value={answer} onChange={(e) => onChange(e, index)} />
+                        <Form.Input type="text" value={answer} onChange={(e) => onChange(e, index)} maxLength={50} />
                     </Form.Group>
                 )
             })}

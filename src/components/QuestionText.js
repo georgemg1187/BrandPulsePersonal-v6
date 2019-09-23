@@ -19,7 +19,7 @@ const QuestionText = ({idx}) => {
         <Form>
             <Form.Group>
                 <Form.Label> {`Question ${idx + 1}`} </Form.Label>
-                <Form.Input type="text" value={questions[idx].question} onChange={onChange} className='form-control-lg' />
+                <Form.Input type="text" value={questions[idx].question} onChange={onChange} className='form-control-lg' maxLength={140} />
             </Form.Group>
         </Form>
     )
