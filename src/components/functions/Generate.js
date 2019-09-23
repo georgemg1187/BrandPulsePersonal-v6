@@ -15,7 +15,7 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
         if (endMessage.trim().length === 0) requiredFields++;
     });
 
-    if (requiredFields !== 0) return;
+    if (requiredFields !== 0) return alert('Please complete all the required fields (at least two answers per question)');
 
     //Prepare for output
     duplicate.forEach((el, index) => {

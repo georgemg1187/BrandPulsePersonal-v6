@@ -14,7 +14,13 @@ const Navigation = () => {
 
     const languages = [
         { label: 'English', value: 'english' },
-        { label: 'French', value: 'french' }
+        { label: 'French', value: 'french' },
+        { label: 'Spanish', value: 'spanish'},
+        { label: "Italian", value: "italian"},
+        { label: "German", value: "german"},
+        { label: "Portuguese", value: "portuguese"},
+        { label: "LATAM", value: "latam"},
+        { label: "Japanese", value: "japanese"}
     ]
 
     const handeItemsClick = e => {        
