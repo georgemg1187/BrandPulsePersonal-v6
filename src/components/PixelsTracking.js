@@ -53,7 +53,7 @@ const PixelsTracking = () => {
                         <Form.Input name='exposed' id='exposed' value={tracking.exposed} onChange={handleInputUpdate} />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label htmlFor='non-exposed'>Exposed Tracking</Form.Label>
+                        <Form.Label htmlFor='non-exposed'>Non-Exposed Tracking</Form.Label>
                         <Form.Input name='noneexposed' id='non-exposed' value={tracking.noneexposed} onChange={handleInputUpdate} />
                     </Form.Group>
                 </div>
