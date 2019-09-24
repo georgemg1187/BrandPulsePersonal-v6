@@ -47,7 +47,10 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
         value += '\tvar firstScreen = document.getElementById(creative.screens[0].name); \n'
         value += `\tfirstScreen.classList.add('${variant}'); \n \n`
 
+
         bp.forEach(el => {
+            let pixel = el.trackPixel === false ? el.trackPixel : JSON.stringify(el.trackPixel.replace('http://', "https://"))
+
             value += `\tnew Survey(
             ${JSON.stringify(el.question)},    
             ${JSON.stringify(el.answers)},
@@ -56,7 +59,7 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
             ${el.progress},
             ${JSON.stringify(el.selectionType)},
             ${el.randomize},
-            ${el.trackPixel},
+            ${pixel},
             ${el.zIndex}
         ) \n`;
         })
