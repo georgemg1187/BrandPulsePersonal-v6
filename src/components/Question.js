@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from './layout/Card/Card';
 import QuestionText from './QuestionText';
 import QuestionMenu from './QuestionMenu';
@@ -18,7 +18,12 @@ const Question = ({ idx }) => {
     const questionContext = useContext(QuestionContext);
     const { metric } = questionContext;
 
+    const [lng, setLng] = useState(language);
+
     useEffect(() => {
+        if (lng === language) return;
+
+        setLng(language)
         const newQeustions = questions.map(question => JSON.parse(JSON.stringify(data[language.value].type[metric.value])))
         questionsUpdate(newQeustions) // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [language])
