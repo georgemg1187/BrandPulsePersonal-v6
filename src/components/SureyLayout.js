@@ -14,7 +14,8 @@ const SurveyLayout = () => {
     const menuItems = [
         { label: 'Black on white text', value: 'bg1' },
         { label: 'Black and blue on white text', value: 'bg2' },
-        { label: 'White and black on grey', value: 'bg3' }
+        { label: 'White and black on grey', value: 'bg3' },
+        { label: 'Card with white text', value: 'bg4' }
     ]
 
     const handleMenuItem = e => {
