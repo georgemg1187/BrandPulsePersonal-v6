@@ -48,8 +48,12 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
         value += `\tfirstScreen.classList.add('${variant}'); \n \n`
 
 
-        bp.forEach(el => {
-            let pixel = el.trackPixel === false ? el.trackPixel : JSON.stringify(el.trackPixel.replace('http://', "https://"))
+        bp.forEach((el, idx) => {
+            let pixel;
+
+            if (idx == bp.length - 1) {
+                pixel = el.trackPixel === false ? el.trackPixel : JSON.stringify(el.trackPixel.replace('http://', "https://"))
+            } else {pixel = false;} 
 
             value += `\tnew Survey(
             ${JSON.stringify(el.question)},    
