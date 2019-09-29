@@ -51,7 +51,7 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
         bp.forEach((el, idx) => {
             let pixel;
 
-            if (idx == bp.length - 1) {
+            if (idx === bp.length - 1) {
                 pixel = el.trackPixel === false ? el.trackPixel : JSON.stringify(el.trackPixel.replace('http://', "https://"))
             } else {pixel = false;} 
 

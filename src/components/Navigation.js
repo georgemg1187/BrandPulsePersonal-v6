@@ -7,6 +7,8 @@ import FormularContext from '../context/formular/FormularContext';
 
 import data from '../data/data';
 
+import logo from '../images/logo.png';
+
 const Navigation = () => {
 
     const formularContext = useContext(FormularContext);
@@ -36,7 +38,8 @@ const Navigation = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <Container>
-                <div className='nav-left mr-auto'>
+                <div className='nav-left mr-auto d-flex'>
+                    <img src={logo} alt='brand pulse logo' className='mr-3' />
                     <DropDown>
                         <DropDown.Toggle>
                             {language.label}
