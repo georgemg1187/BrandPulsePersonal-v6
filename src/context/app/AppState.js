@@ -8,7 +8,7 @@ import {
 
 const AppState = props => {
     const initialState = {
-        password: "teads",
+        password: "kloppisthebest19",
         passwordMatched: false
     }
 
