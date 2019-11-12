@@ -124,7 +124,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -261,7 +261,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -398,7 +398,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -535,7 +535,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -672,7 +672,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -809,7 +809,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -946,7 +946,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -1083,7 +1083,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", "", ""],
+                answers: ["", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {

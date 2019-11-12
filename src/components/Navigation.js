@@ -39,7 +39,7 @@ const Navigation = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <Container>
                 <div className='nav-left mr-auto d-flex'>
-                    <img src={logo} alt='brand pulse logo' className='mr-3' />
+                    <img src={logo} alt='brand pulse logo' className='mr-3' style={{objectFit: "contain"}} />
                     <DropDown>
                         <DropDown.Toggle>
                             {language.label}
