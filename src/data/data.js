@@ -48,6 +48,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "None of the above"
                 }
@@ -58,6 +59,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -68,6 +70,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "None of the above"
                 }
@@ -78,6 +81,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "None of the above"
                 }
@@ -88,6 +92,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -98,6 +103,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "None of the above"
                 }
@@ -108,6 +114,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -118,6 +125,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -128,6 +136,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -185,6 +194,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Aucune de ces marques"
                 }
@@ -195,6 +205,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -205,6 +216,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Aucune de ces marques"
                 }
@@ -215,6 +227,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Aucune de ces marques"
                 }
@@ -225,6 +238,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -235,6 +249,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Aucune de ces marques"
                 }
@@ -245,6 +260,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -255,6 +271,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -265,6 +282,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -322,6 +340,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -332,6 +351,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -342,6 +362,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -352,6 +373,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -362,6 +384,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -372,6 +395,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -382,6 +406,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -392,6 +417,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -402,6 +428,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -459,6 +486,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nessuno di questi"
                 }
@@ -469,6 +497,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -479,6 +508,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nessuno di questi"
                 }
@@ -489,6 +519,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nessuno di questi"
                 }
@@ -499,6 +530,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -509,6 +541,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nessuno di questi"
                 }
@@ -519,6 +552,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -529,6 +563,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -539,6 +574,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -596,6 +632,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Keine der Genannten"
                 }
@@ -606,6 +643,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -616,6 +654,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Keine der Genannten"
                 }
@@ -626,6 +665,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Keine der Genannten"
                 }
@@ -636,6 +676,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -646,6 +687,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Keine der Genannten"
                 }
@@ -656,6 +698,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -666,6 +709,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -676,6 +720,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -733,6 +778,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nenhuma"
                 }
@@ -743,6 +789,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -753,6 +800,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nenhuma"
                 }
@@ -763,6 +811,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nenhuma"
                 }
@@ -773,6 +822,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -783,6 +833,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Nenhuma"
                 }
@@ -793,6 +844,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -803,6 +855,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -813,6 +866,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -870,6 +924,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -880,6 +935,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -890,6 +946,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -900,6 +957,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -910,6 +968,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -920,6 +979,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "Ninguna de estas"
                 }
@@ -930,6 +990,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -940,6 +1001,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -950,6 +1012,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }
@@ -1007,6 +1070,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "どれも当てはまらない"
                 }
@@ -1017,6 +1081,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -1027,6 +1092,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "どれも当てはまらない"
                 }
@@ -1037,6 +1103,7 @@ const Metrics = {
                 multiple: false,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "どれも当てはまらない"
                 }
@@ -1047,6 +1114,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -1057,6 +1125,7 @@ const Metrics = {
                 multiple: true,
                 randomize: true,
                 none: {
+                    toggleable: true,
                     checked: true,
                     value: "どれも当てはまらない"
                 }
@@ -1067,6 +1136,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -1077,6 +1147,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: false,
                     checked: false,
                     value: ""
                 }
@@ -1087,6 +1158,7 @@ const Metrics = {
                 multiple: false,
                 randomize: false,
                 none: {
+                    toggleable: true,
                     checked: false,
                     value: ""
                 }

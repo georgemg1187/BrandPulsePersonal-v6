@@ -33,6 +33,8 @@ const QuestionConfig = ({ idx }) => {
         questionsUpdate(newQuestions);
     }
 
+    const noneToggleStyle = !questions[idx].none.checked ? true : {opacity: 0.3}
+
     return (
         <Group>
             <Form className='d-flex justify-content-between align-items-center'>
@@ -46,8 +48,8 @@ const QuestionConfig = ({ idx }) => {
                 </Form.Group>
                 <div>
                     <Form.Group className='mb-0 d-flex justify-content-between align-items-center' version='custom-control custom-switch'>
-                        <Form.Input type="checkbox" version="custom-control-input" id={`none_${idx + 1}`} checked={questions[idx].none.checked} onChange={handleSwitch} />
-                        <Form.Label variant="custom-control-label" htmlFor={`none_${idx + 1}`}>None</Form.Label>
+                        <Form.Input type="checkbox" version="custom-control-input" id={`none_${idx + 1}`} checked={questions[idx].none.checked} onChange={handleSwitch}  disabled={!questions[idx].none.toggleable}/>
+                        <Form.Label style={noneToggleStyle} variant="custom-control-label" htmlFor={`none_${idx + 1}`}>None</Form.Label>
 
                         <Form.Input type="text" className='ml-3' value={questions[idx].none.value} disabled={!questions[idx].none.checked} onChange={handleNone} />
                     </Form.Group>
