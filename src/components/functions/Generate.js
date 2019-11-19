@@ -17,6 +17,12 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
 
     if (requiredFields !== 0) return alert('Please complete all the required fields (at least two answers per question)');
 
+    if (tracking.exposed.indexOf('http') !== 0 || tracking.noneexposed.indexOf('http') !== 0) {
+        console.log(tracking.exposed.indexOf('http://'), tracking.exposed.indexOf('https://'))
+        requiredFields++;
+        alert ('Please check tracking pixels for spelling erros. Make just to add just the url - without the image tag');
+    }
+
     //Prepare for output
     duplicate.forEach((el, index) => {
         el.answers = el.answers.map((answer, idx) => { return { value: answer, id: `Q${index + 1}_Answer${idx + 1}` } });
