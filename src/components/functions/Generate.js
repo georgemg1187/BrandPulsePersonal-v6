@@ -17,10 +17,12 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
 
     if (requiredFields !== 0) return alert('Please complete all the required fields (at least two answers per question)');
 
-    if (tracking.exposed.indexOf('http') !== 0 || tracking.noneexposed.indexOf('http') !== 0) {
-        console.log(tracking.exposed.indexOf('http://'), tracking.exposed.indexOf('https://'))
-        requiredFields++;
-        return alert ('Please check tracking pixels for spelling erros. Make just to add just the url - without the image tag');
+    if (tracking.exposed || tracking.noneexposed) {
+        if (tracking.exposed.indexOf('http') !== 0 || tracking.noneexposed.indexOf('http') !== 0) {
+            console.log(tracking.exposed.indexOf('http://'), tracking.exposed.indexOf('https://'))
+            requiredFields++;
+            return alert('Please check tracking pixels for spelling erros. Make just to add just the url - without the image tag');
+        }
     }
 
     //Prepare for output
@@ -46,7 +48,7 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
 
         bp.forEach(el => {
             el.answers.forEach(answer => value += `// ${answer.id} ---> ${answer.value} \n`)
-            if (el.none !== false) {value += `// ${el.none.id} ---> ${el.none.value} \n\n`} else { value += '\n'}
+            if (el.none !== false) { value += `// ${el.none.id} ---> ${el.none.value} \n\n` } else { value += '\n' }
         })
 
         value += 'creative.screens[0].onshow.addEventListener(function () { \n'
@@ -59,7 +61,7 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
 
             if (idx === bp.length - 1) {
                 pixel = el.trackPixel === false ? el.trackPixel : JSON.stringify(el.trackPixel.replace('http://', "https://"))
-            } else {pixel = false;} 
+            } else { pixel = false; }
 
             value += `\tnew Survey(
             ${JSON.stringify(el.question)},    
