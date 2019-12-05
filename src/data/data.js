@@ -88,7 +88,7 @@ const Metrics = {
             },
             favourability: {
                 question: "What is your opinion of (brand/product)?",
-                answers: ["I like it a lot", "I like it", "I neither like nor dislike it", "I don't like it", "I hate it"],
+                answers: ["I like it a lot", "I like it", "I neither like nor dislike it", "I don't like it", "I dislike it a lot"],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -132,7 +132,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -278,7 +278,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -424,7 +424,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -570,7 +570,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -716,7 +716,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -851,7 +851,7 @@ const Metrics = {
             },
             actionIntent: {
                 question: "Qual é a probabilidade de que (faça alguma ação)?",
-                answers: ["Muito provável", "pouco provável", "neutro", "improvável", "muito improvável"],
+                answers: ["Muito provável", "Pouco provável", "Neutro", "Improvável", "Muito improvável"],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -862,7 +862,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -1008,7 +1008,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -1110,7 +1110,7 @@ const Metrics = {
             },
             favourability: {
                 question: "あなたは以下のブランド・製品についてどう思いますか。",
-                answers: ["とても好きだ、好きだ、どちらでもない、好きではない、嫌いだ"],
+                answers: ["とても好きだ、", "好きだ、", "どちらでもない、", "好きではない、", "嫌いだ"],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -1132,7 +1132,7 @@ const Metrics = {
             },
             purchaseIntent: {
                 question: "あなたは以下のブランドの製品を購入したいと思いますか？",
-                answers: ["非常にそう思う、そう思う、どちらでもない、そう思わない、全く思わない"],
+                answers: ["非常にそう思う、", "そう思う、", "どちらでもない、", "そう思わない、", "全く思わない"],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -1143,7 +1143,7 @@ const Metrics = {
             },
             actionIntent: {
                 question: "あなたは以下の（特定の）アクションをしますか？",
-                answers: ["アクションする、アクションしようと思う、どちらでもない、しない、全くそうしない"],
+                answers: ["アクションする、", "アクションしようと思う、", "どちらでもない、", "しない、", "全くそうしない"],
                 multiple: false,
                 randomize: false,
                 none: {
@@ -1154,7 +1154,7 @@ const Metrics = {
             },
             custom: {
                 question: "",
-                answers: ["", "", "", ""],
+                answers: ["", "", "", "", ""],
                 multiple: false,
                 randomize: false,
                 none: {

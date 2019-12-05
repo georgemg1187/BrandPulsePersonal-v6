@@ -3,17 +3,27 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
 
     // Check if all required fileds are completed
     let requiredFields = 0;
-    duplicate.forEach(el => {
-        if (el.question.trim().length === 0) requiredFields++;
-        if (el.answers[0].trim().length === 0) requiredFields++;
-        if (el.answers[1].trim().length === 0) requiredFields++;
-        if (el.none.checked && el.none.value.trim().length === 0) requiredFields++;
-        if (tracking.exposed !== false && tracking.exposed.trim().length === 0) requiredFields++;
-        if (tracking.noneexposed !== false && tracking.noneexposed.trim().length === 0) requiredFields++;
-        if (nextBtn.trim().length === 0) requiredFields++;
-        if (submitBtn.trim().length === 0) requiredFields++;
-        if (endMessage.trim().length === 0) requiredFields++;
-    });
+    let minCheckedAnswers = 2;
+
+    for (let i =0; i < duplicate.length; i++) {
+        if (duplicate[i].question.trim() === 0) requiredFields++;
+       
+        let answersChecked = 0;
+        duplicate[i].answers.forEach(answer => {  if (answer.trim().length !== 0) answersChecked++; })
+
+        if (duplicate[i].none.checked) {
+            if (duplicate[i].none.value.trim().length !== 0) answersChecked++;
+            else {requiredFields++;}
+        }
+
+        if (answersChecked < minCheckedAnswers) requiredFields++;
+    }
+
+    if (tracking.exposed !== false && tracking.exposed.trim().length === 0) requiredFields++;
+    if (tracking.noneexposed !== false && tracking.noneexposed.trim().length === 0) requiredFields++;
+    if (nextBtn.trim().length === 0) requiredFields++;
+    if (submitBtn.trim().length === 0) requiredFields++;
+    if (endMessage.trim().length === 0) requiredFields++;
 
     if (requiredFields !== 0) return alert('Please complete all the required fields (at least two answers per question)');
 
@@ -27,7 +37,9 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
 
     //Prepare for output
     duplicate.forEach((el, index) => {
-        el.answers = el.answers.map((answer, idx) => { return { value: answer, id: `Q${index + 1}_Answer${idx + 1}` } });
+        let answers = el.answers.filter(answer => answer.trim().length !== 0 ? answer : false);
+
+        el.answers = answers.map((answer, idx) => {return { value: answer, id: `Q${index + 1}_Answer${idx + 1}` } });
         el.none = el.none.checked ? el.none = { value: el.none.value, id: `Q${index + 1}_Answer${el.answers.length + 1}` } : false;
         el.zIndex = duplicate.length - index;
         el.button = index !== (duplicate.length - 1) ? nextBtn : submitBtn;
@@ -54,7 +66,6 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
         value += 'creative.screens[0].onshow.addEventListener(function () { \n'
         value += '\tvar firstScreen = document.getElementById(creative.screens[0].name); \n'
         value += `\tfirstScreen.classList.add('${variant}'); \n \n`
-
 
         bp.forEach((el, idx) => {
             let pixel;

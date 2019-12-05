@@ -1,12 +1,30 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Form from './layout/Form/Form';
 
 import FormularContext from '../context/formular/FormularContext';
+import QuestionContext from '../context/question/QuestionContext';
 
 const Answers = ({ idx }) => {
 
     const formularContext = useContext(FormularContext);
     const { questions, questionsUpdate } = formularContext;
+
+    const questionContext = useContext(QuestionContext);
+    const { metric } = questionContext;
+
+    const maxAnswers = 5;
+
+    useEffect(() => {
+        const newQuestions = [...questions];
+
+        if (metric.value === "custom") {
+            if (newQuestions[idx].none.checked) {
+                newQuestions[idx].answers.pop();
+            } else if (newQuestions[idx].answers.length < maxAnswers) newQuestions[idx].answers.push("")
+        }
+
+        questionsUpdate(newQuestions)// eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [metric, questions[idx].none.checked])
 
     const onChange = (e, index) => {
         const newQuestions = [...questions];
