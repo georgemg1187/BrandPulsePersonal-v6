@@ -17,6 +17,8 @@ const Generate = (tracking, questions, progressBox, nextBtn, submitBtn, endMessa
         }
 
         if (answersChecked < minCheckedAnswers) requiredFields++;
+
+        if (duplicate[i].question.trim().length === 0) requiredFields++;
     }
 
     if (tracking.exposed !== false && tracking.exposed.trim().length === 0) requiredFields++;
