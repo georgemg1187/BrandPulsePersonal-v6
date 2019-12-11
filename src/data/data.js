@@ -840,7 +840,7 @@ const Metrics = {
             },
             purchaseIntent: {
                 question: "Qual a probabilidade de você comprar um produto de marca (marca)?",
-                answers: ["Muito provável", "pouco provável", "neutro", "improvável", "muito improvável"],
+                answers: ["Muito provável", "Pouco provável", "Neutro", "Improvável", "Muito improvável"],
                 multiple: false,
                 randomize: false,
                 none: {
